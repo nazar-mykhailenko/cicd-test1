@@ -11,3 +11,14 @@ def write_to_file(file_path, lines):
 
 def filter_lines(lines, keyword):
     return [line for line in lines if keyword in line]
+
+
+def main():
+    lines = read_file("input.txt")
+    keyword = input("Enter keyword: ")
+    filtered_lines = filter_lines(lines, keyword)
+    write_to_file("filtered.txt", filtered_lines)
+
+
+if __name__ == "__main__":
+    main()
